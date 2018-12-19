@@ -1,0 +1,18 @@
+/*ex07 에서 사용할 css 파일 */   
+h1{
+                color: crimson;
+                background-color:cadetblue;
+                border-top-style: dotted;
+                border-bottom-width: 1px;
+                border-bottom-style: dotted;
+                border-width: thick;
+    
+    
+            }
+            
+            P{
+                color: cadetblue;
+                text-decoration-line: underline;
+            }
+            
+        
