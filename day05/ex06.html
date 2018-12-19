@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+        //함수
+            function func01(){
+                document.write('<h1>출력1<h1>');
+                if('a') return;
+                document.write('<h2>출력2<h2>');
+            }
+        
+            function func02(a,b){
+                return a*b;
+            }
+            
+//            func01();
+//            var a = func02(3,2);
+//            document.write('a='+a);
+            
+            var h = 4321;
+            function func03(h){
+              //  var h = 1234;//지역변수
+                document.write("in h="+h+"<br/>");
+            }
+//            func03();
+//            document.write("out h="+h+"<br/>")
+            
+            var v = (function (a,b){
+                document.write(a*b+'<br/>');
+            });
+            v(10,3);
+        </script>
+    </head>
+    <body></body>
+</html>

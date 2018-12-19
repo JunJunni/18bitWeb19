@@ -1,0 +1,41 @@
+
+<!doctype html>
+<html>
+    <head>
+<!--        배열-Array-배열-Array-배열-Array-배열-Array-배열-Array-배열-Array-배열-Array-배열-Array-배열-Array-배열-Array-->
+        <meta charset="utf-8">
+        <script type= "application/javascript">
+       
+            var h = new Array(5,4,3,2,1);
+            
+            h[0]=1;
+            h[1]=2;
+            h[2]=3;
+            h[3]=4;
+            
+            h=['a','b','c','d'];
+            h.push('e');
+            h.push('f');
+            
+             h.reverse();
+            
+//            for(var i=0; i<h.length; i++){
+//                document.write(h[i]+"</br>")
+//            }
+            
+            var size = h.length;
+            while(h.length){
+                document.write(h.pop()+"</br>");
+            }
+            
+            for(var ele in h){
+//                document.write(ele);
+//                document.write(h[ele]+'</br>');
+//            }
+            
+            
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

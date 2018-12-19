@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>animation</title>
+        <style>
+            li{
+                background-image: url(imgs/cat.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            div>ul{
+                padding: 0px;
+                list-style: none;
+            }
+            div>ul>li{
+                width: 100px;
+                height: 50px;
+                margin: 1px 0px;
+                background-color: azure;
+                
+                transition-duration: 1s;
+                position: relative;
+                left: 0px;
+            }
+            div>ul>li:first-child{
+                transition-timing-function: ease-in;
+            }
+            div>ul>li:nth-child(2){
+                transition-timing-function: ease-out;
+            }
+            div>ul>li:nth-child(3){
+                transition-timing-function: linear;
+            }
+            div>ul>li:nth-child(4){
+                transition-delay: 3s;
+            }
+              div>ul>li:nth-child(5){
+               
+            }
+            div>ul>li:hover{
+/*                background-color: aquamarine;*/
+/*                width: 300px;*/
+                left: 300px;
+                transform: rotate(180deg);
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li>cat</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<!--애니메이션-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: crimson;
+                animation-name: ani2;
+                animation-duration: 3s;
+/*                animation-iteration-count: infinite; 애니메이션을 수행할 횟수*/
+/*                animation-direction: alternate-reverse;*/
+            }
+            @keyframes ani2{
+                0%{
+                    width: 300px;
+                }
+                50%{
+                    width: 100px;
+                }
+                100%{
+                    width: 500px;
+                }
+            }
+            @keyframes ani1{
+/*                처음과 끝이 반드시 필요!*/
+                from{
+                    background-color: crimson; 
+                }
+                to{
+                    background-color: cadetblue;
+                }
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
