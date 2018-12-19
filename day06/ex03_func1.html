@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+           
+            function func01(){
+                return;
+            };
+            
+            //익명함수-이름을 갖기 전까지 호출불가
+            var func02 = function(){
+                return;
+            };
+            
+//            var su = 111;
+//            var obj={su:1234};
+            
+            var su = 1111;
+           
+            (function(){
+             function func03(){
+                return 4321;
+            }
+            var su= func03();
+                document.write('su='+su);
+             })();
+            
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

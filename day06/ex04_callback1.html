@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+            function func01(){
+                document.write('실행');
+            };
+            
+            function func02(a){
+                a();
+            };
+        
+//            func02(func01);
+            //interval이라는 이함수가 callback 이래
+            window.setInterval(func01,3000);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

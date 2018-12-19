@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+        
+            var k = new Object();
+            k={
+                'key1':'value1',
+                'key2':'value2',
+                '1234':'value3',
+                h:'value4'
+            };
+            //대부분 object의 key 값은 string을 사용! 오해의 소지 없도록 ㅎ
+            
+            document.write(k['key1']+'</br>');
+            document.write(k.key2+'</br>');
+            document.write(k[1234]+'</br>');
+            document.write(k.h+'</br>');
+            //아래의 둘은 안된댜!
+//            document.write(k[h]+'</br>');
+//            document.write(k.1234+'</br>');
+            
+            
+        
+        </script>
+    </head>
+    <body></body>
+</html>

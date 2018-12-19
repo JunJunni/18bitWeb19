@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+            var obj = new Object();
+            obj.su=1234;
+            obj.name='tester';
+            
+            obj.getSu=function(){
+//                var su = 4321;
+//                return su;
+                return this.su;
+            }
+            obj.setSu=function(a){
+                this.su=a;
+            };
+            obj.getName = function(){
+                return this.name;  
+            };
+            obj.setName = function(a){
+                this.name = a;
+            };
+            
+//            var num = obj.func01();
+            obj.setSu(25);
+            obj.setName('Adel');
+            
+            document.write(obj.getName()+'</br>');
+            document.write(obj.getSu());
+            
+            var obj2 = {
+                //json(통신) key값은 반드시 문자열->""
+                num:1,
+                name:"", //전역변수와 이름이 겹치지 않아야한다! 
+                //자바스크립트는 싱글,더블 구분엑스~! 
+                getNum:function(){return this.num;},
+                setNum:function(a){this.num=a;},
+                getName:function(){return this.name;},
+                setNmae:function(a){this.name=a;}
+            };
+        
+        </script>
+    </head>
+    <body></body>
+</html>

@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+            
+            function func1(){
+//                document.write(arguments[0]+" 실행");
+                //arguments->배열 function에서 지원하는 기능
+                
+                for(var i=0; i<arguments.length; i++){
+                    document.write(arguments[i]+" ");
+                }
+
+            };
+            
+            func1(1,2,3,4,'a','b',true,false);
+        
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

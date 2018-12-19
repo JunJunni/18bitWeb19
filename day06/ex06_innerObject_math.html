@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+            var ran=Math.random();
+            ran*=45;
+            ran+=1;
+            document.write(parseInt(ran)+'</br>');
+            
+            function func(){
+            var date=new Date();
+            document.write(date.getYear()+1900+'년');
+            document.write(date.getMonth()+1+'월');
+            document.write(date.getDate()+'일');
+            document.write(date.getHours()+'시');
+            document.write(date.getMinutes()+'분');
+            document.write(date.getSeconds()+'초'+'</br>');
+            };
+            
+//            window.setInterval(func,1000);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

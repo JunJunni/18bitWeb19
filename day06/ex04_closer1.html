@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+        
+        function func01(a){
+            
+//            var su=1000;
+            var func = function(b){
+                return b+a;
+            };
+            return func;
+        };
+            
+//            var obj=func01()();
+            //su 의 life cycle이 끝았음에도 불구 실행가능! 
+            //백엔드의 전역,지역 변수의 개념과는 조금 다르다
+         
+            //이것이 바로 closer......closer~~
+            var obj1=func01(3);
+            var obj2=func01(4);
+            document.write(obj2(200));
+        
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

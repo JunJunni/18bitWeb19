@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+            var obj1=1111;
+            var obj2=2222;
+            
+            function func01(a){
+                var c=a;
+                return{
+                    
+                    'getter':function(){return c;},
+                    'setter':function(b){c=b;}
+                };
+            };
+            
+            var obj=func01(obj1);
+            obj.setter(1234);
+//            func01(obj1).setter(obj2);
+            document.write(obj.getter());
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

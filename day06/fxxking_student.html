@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type = "text/css">
+            table{
+                width: 100%;
+                border: 1px solid gray;
+                border-collapse: collapse;
+            }
+            th,td{
+               border: 1px solid gray; 
+            }
+        
+        
+        </style>
+        <script type="application/javascript">
+
+            function newStudent(){
+                var student={
+                    number:0,
+                    name:'noname',
+                    kor:0,
+                    eng:0,
+                    math:0,
+                    
+                    setNumber:function(a){this.number=a;},
+                    setName:function(a){this.name=a;},
+                    setKor:function(a){this.kor=a;},
+                    setEng:function(a){this.eng=a;},
+                    setMath:function(a){this.math=a;},
+                    
+                    getNumber:function(){return this.number},
+                    getName:function(){return this.name},
+                    getKor:function(){return this.kor},
+                    getEng:function(){return this.eng},
+                    getMath:function(){return this.math}
+                    
+                };
+                return student;
+            };
+            
+        function showTable(arr){
+            document.write('<table>');
+                document.write('<tr>');
+                    document.write('<th>'+'학번'+'</th>');
+                    document.write('<th>'+'이름'+'</th>');
+                    document.write('<th>'+'국어'+'</th>');
+                    document.write('<th>'+'영어'+'</th>');
+                    document.write('<th>'+'수학'+'</th>');
+                document.write('</tr>');
+            
+                for(var i=0; i<arr.length; i++){
+                    document.write('<tr>');
+                        document.write('<td>'+arr[i].getNumber()+'</td>');
+                        document.write('<td>'+arr[i].getName()+'</td>');
+                        document.write('<td>'+arr[i].getKor()+'</td>');
+                        document.write('<td>'+arr[i].getEng()+'</td>');
+                        document.write('<td>'+arr[i].getMath()+'</td>');
+                    document.write('</tr>');
+            }
+            document.write('</table>');
+        };
+            
+            var arr = new Array();
+            var stu = newStudent();
+            
+            stu.setNumber(21220145);
+            stu.setName('이주은');
+            stu.setKor(97);
+            stu.setEng(64);
+            stu.setMath(78);
+            arr.push(stu);
+            
+            showTable(arr);
+        
+        </script>
+    </head>
+    <body>
+        <h1>학생 성적 리스트... 하기시룸..ㅠㅡㅠ</h1>
+    </body>
+</html>
