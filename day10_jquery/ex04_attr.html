@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css"></style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            window.onload=function(){
+                //getter
+//                var msg=$('img').attr('src');
+//                alert(msg);
+                
+                //setter
+                $('img').attr('src', 'imgs/small1.jpg');
+                
+//                var msg =$('a').attr('href');
+//                alert(msg);
+                
+                $('a').attr('href','http://google.com');
+                
+                var input=document.querySelector('input');
+                input.onchange=getText;
+            };
+            function getText(){
+                //var msg=$(':text').attr('value');
+                var msg=$(':text').val(); //이렇가하면 밸류가 나옴다~~ 
+                alert(msg);
+            };
+        </script>
+    </head>
+    <body>
+        <h1>속성제어</h1>
+        <img alt="logo" src="imgs/track.png"/>
+        <div><a href="ex01_selector.html"></a></div>
+        <div>
+            <input type = "text" value = "defalt"/>
+        </div>
+        <div>
+            <select>
+                <option>item1</option>
+                <option>item2</option>
+                <option selected>item3</option>
+                <option>item4</option>
+            </select>
+        </div>
+        
+        <div>
+            <input type="radio" name ="ra"><label>item1</label>
+            <input type="radio" name ="ra" checked><label>item2</label>
+            <input type="radio" name ="ra"><label>item3</label>
+        </div>
+    </body>
+</html>

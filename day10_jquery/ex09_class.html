@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+            .cl1{
+                background-color: aliceblue;
+            }
+            .cl2{
+                color: coral;
+            }
+            .cl3{
+                display: none;
+            }
+        
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            
+            window.onload=function(){
+               var btn=document.querySelectorAll('button');
+                btn[0].addEventListener('click',btnAction1);
+                btn[1].addEventListener('click',btnAction2);
+    
+//                alert($('h1').hasClass('cl2'));
+                btn[2].addEventListener('click',function(){
+                    $('h1').toggleClass('cl1');
+                })
+                
+//                $('li').addClass(function(idx,name){
+//                    console.log(idx,name);
+//                    if(idx%2==0) 
+//                    return 'cl2';
+//                    else
+//                        return '';
+//                });
+            };
+            var beforeAttr;
+            function btnAction1(){
+//                 beforAttr=$('h1').attr('class');
+//                $('h1').attr('class',beforAttr+'cl1');
+                $('h1').addClass('cl1');
+                $('h1').addClass('cl2');
+            };
+            
+            function btnAction2(){
+//                 $('h1').attr('class',beforeAttr);
+                $('h1').removeClass('cl1');
+            };
+        
+        </script>
+    </head>
+    <body>
+        <h1>Class Add,Remove</h1>
+        <button>Add</button>
+        <button>Remove</button>
+        <button>Toggle</button>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+            <li>item4</li>
+            <li>item5</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+            img{
+                width: 200px;
+                height: 300px;
+            }
+/*
+            div>ul>li{
+                float: left;
+                list-style: none;
+            }
+            div>ul>li>img{
+                display: none;
+            }
+*/
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            var cnt=0;
+            window.onload =function(){
+                setInterval(callback2,2000);
+            };
+            
+            function callback2(){
+                $('li').css('display','none');
+                $('li').eq(cnt).css('display','block').next().css('display','block').next().css('display','block');
+                if(cnt<5)cnt++;
+                else cnt=0;
+            };
+
+            
+        </script>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li><img alt="" src="imgs/small1.jpg"></li>
+                <li><img alt="" src="imgs/small2.jpg"></li>
+                <li><img alt="" src="imgs/small3.jpg"></li>
+                <li><img alt="" src="imgs/small4.jpg"></li>
+                <li><img alt="" src="imgs/small5.jpg"></li>
+                <li><img alt="" src="imgs/small6.jpg"></li>
+                <li><img alt="" src="imgs/small1.jpg"></li>
+                <li><img alt="" src="imgs/small2.jpg"></li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+            img{
+                width: 200px;
+                height: 300px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            var cnt=0;
+            window.onload =function(){
+                setInterval(callback2,2000);
+            };
+
+            
+            function callback(){
+                //속성제어를 이용한 방법 
+                if(cnt<6)cnt++;
+                else cnt=1;
+               
+                $('img').eq(0).attr('src','imgs/small'+cnt+'.jpg');
+                
+                if (cnt+1==7){
+                $('img').eq(1).attr('src','imgs/small'+(1)+'.jpg');
+                }else{
+                $('img').eq(1).attr('src','imgs/small'+(cnt+1)+'.jpg');
+                }
+                
+                if(cnt+2==7){
+                    $('img').eq(2).attr('src','imgs/small'+(1)+'.jpg');
+                }else if(cnt+2==8){
+                    $('img').eq(2).attr('src','imgs/small'+(2)+'.jpg');
+                }else{    
+                    $('img').eq(2).attr('src','imgs/small'+(cnt+2)+'.jpg');
+                }
+            };
+            
+        </script>
+    </head>
+    <body>
+        <img/>
+        <img/>
+        <img/>
+    </body>
+</html>

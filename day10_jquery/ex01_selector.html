@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+/*
+            h1{
+                color: crimson;
+                background-color: cadetblue;
+                border: 1px solid gray;
+            }
+*/
+        </style>
+        <script
+  src="https://code.jquery.com/jquery-1.12.4.js">
+</script>
+        <script type="application/javascript">
+            window.onload = function(){
+                //이건 자바 스크립트
+//                var lis=document.querySelectorAll('li');
+//                lis.forEach(function(ele,idx){
+//                    ele.style.color='blue';
+//                });
+                
+                //제이쿼리 
+//                $('h1').next().find('.cl1').first().next().css('color','red');
+//                var msg=$('h1').css('border');
+//                alert(msg);
+                //jquery는 인자 하나 setter 인자둘 getter의 역할! 
+                
+                $('h1').css({
+                    'color':'red',
+                    'backgroundColor':'#0000ff',
+                    'border':'1px solid gray'
+                });
+                
+                
+            };
+        </script>
+    </head>
+    <body>
+        <h1>선택자 &gt;ㅁ&lt;</h1>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3
+                <ul>
+                    <li class="cl1">item3-1</li>
+                    <li class="cl1">item3-2</li>
+                    <li>item3-3</li>
+                </ul>    
+            </li>
+            <li>item4
+                <ol>
+                    <li class="cl1">item5-1</li>
+                    <li class="cl1">item5-2</li>
+                    <li>item5-3</li>
+                
+                </ol>
+            </li>
+            <li>item6</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+          
+            #target>img{
+                width: 500px;
+                height:500px;
+            }
+            #source>img{
+                width: 100px;
+                height: 100px;
+            }
+/*
+            #source{
+                display: none; //자리도 안차지한데 
+            }
+*/
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            window.onload= function(){
+              
+                var f=$('#source>img').first(); // 처음엔 소스에 있는 이미지를 들고와서
+                $('#target').html(f); //큰화면인 타켓에 올림 
+                window.setInterval(loop,2000);
+            };
+            
+            function loop(){
+               $('#source').html($('#source').html()+$('#target').html());
+                //소스의 소스의 타겟... 
+                f=$('#source>img').first(); //소스의 처음이미지 f에 저장
+                $('#target').html(f); //타겟에 내보냄 
+            }
+            
+        </script>
+    </head>
+    <body>
+        <h1>html 메서드를 이용한 캐러셀</h1>
+        <div id ="target"></div>
+        <div id="source">
+            <img alt="" src="imgs/big1.jpg"/>
+            <img alt="" src="imgs/big2.jpg"/>
+            <img alt="" src="imgs/big3.jpg"/>
+            <img alt="" src="imgs/big4.jpg"/>
+            <img alt="" src="imgs/big5.jpg"/>
+            <img alt="" src="imgs/big6.jpg"/>
+        </div>
+    </body>
+</html>

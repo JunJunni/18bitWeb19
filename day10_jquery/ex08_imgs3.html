@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+            #big{
+                width: 300px;
+                height: 500px;
+            }
+            
+            .thumb{
+                width: 200px;
+                height: 300px;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            var cnt=0;
+            window.onload =function(){
+                setInterval(callback3,2000);
+            };
+            
+            function callback3(){
+                if(cnt<6)cnt++;
+                else cnt=1;
+                $('.thumb').eq(1).attr('src','imgs/small'+cnt+'.jpg');
+                func01(cnt);
+                func02(cnt);
+                $('#big').attr('src','imgs/big'+cnt+'.jpg');
+            };
+            
+            function func01(a){
+                //if(a-1<1)a-1=6;
+                if(a-2<0)a=7;
+                $('.thumb').eq(0).attr('src','imgs/small'+(a-1)+'.jpg');
+            }
+            function func02(a){
+                //if(a+1=7)a+1=1;
+               if(a==6)a=0;
+                $('.thumb').eq(2).attr('src','imgs/small'+(a+1)+'.jpg');
+            }
+
+            
+        </script>
+    </head>
+    <body>
+        <img id="big" align="center"/><br>
+        <img class="thumb"/>
+        <img class="thumb"/>
+        <img class="thumb"/>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel="stylesheet" type="text/css">
+            /*#source{
+                display: none;
+            }*/
+            
+            #target>img{
+                width: 500px;
+                height: 500px;
+            }
+            #source>img{
+                width: 100px;
+                height: 100px;
+            }
+        </style>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type="text/javascript">
+            window.onload=function(){
+                var f=$('#source>img').first();
+                $('#target').html(f);
+                
+                window.setInterval(loop,2000);
+                
+            };
+            function loop(){
+                
+            $('#source').html($('#source').html()+$('#target').html());
+            f=$('#source>img').first();
+            $('#target').html(f);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>html메서드를 이용한 케러셀</h1>
+        <div id="target"></div>
+        <div id="source">
+            <img alt="" src="imgs/big1.jpg"/>
+            <img alt="" src="imgs/big2.jpg"/>
+            <img alt="" src="imgs/big3.jpg"/>
+            <img alt="" src="imgs/big4.jpg"/>
+            <img alt="" src="imgs/big5.jpg"/>
+            <img alt="" src="imgs/big6.jpg"/>
+        </div>
+    </body>
+</html>

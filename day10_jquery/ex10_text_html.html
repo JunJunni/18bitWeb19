@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css"></style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            window.onload = function(){
+                var msg1=$('ul').text();
+                var msg2=$('ul').html();
+                console.log(msg1,msg2);
+            };
+            
+        </script>
+    </head>
+    <body>
+        <h1>text,html</h1>
+        <div>
+            <ul>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+                <li>item4</li>
+                <li>item5</li>
+                <li>item6</li>
+            </ul>
+        </div>
+        
+        <div>
+            <ol>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+                <li>item4</li>
+                <li>item5</li>
+                <li>item6</li>
+            </ol>
+        </div>
+    </body>
+</html>

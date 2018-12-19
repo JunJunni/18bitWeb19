@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css"></style>
+        <script
+  src="https://code.jquery.com/jquery-1.12.4.js">
+</script>
+        <script type="application/javascript">
+            window.onload=function(){
+                $(':password').css('background-color','red');
+                $(':radio').css('color','red');
+            };
+        </script>
+    </head>
+    <body>
+        <h1>회원가입</h1>
+        <form>
+            <div>
+                <label for = "id">id</label>
+                <input type="text" id="id">
+            </div>
+        
+            <div>
+                <label for = "pw">pw</label>
+                <input type="password" id="pw">
+            </div>
+            
+            <div>
+                <label for = "name">name</label>
+                <input type="text" id="name">
+            </div>
+            
+            <div>
+                <label for = "age">age</label>
+                <input type="range" id="age" min="1" max="80">
+            </div>
+            
+            <div>
+                <label for = "tel">tel</label>
+                <input type="tel" id="tel">
+            </div>
+            
+            <div>
+                <input type="checkbox" id="ch1">
+                <label for = "ch1">ch1</label>
+                <input type="checkbox" id="ch2">
+                <label for = "ch2">ch2</label>
+                <input type="checkbox" id="ch3">
+                <label for = "ch3">ch3</label>
+            </div>
+            
+            <div>
+                <input type="radio" name ="ra" id="ra1">
+                <label for = "ra1">radio1</label>
+                <input type="radio" name ="ra" id="ra2">
+                <label for = "ra2">radio2</label>
+                <input type="radio" name ="ra" id="ra3">
+                <label for = "ra3">radio3</label>
+            </div>
+            
+            <div>
+                <label for="sel">sel</label>
+                <select id ="sel">
+                    <option>itme1</option>
+                    <option>itme2</option>
+                    <option>itme3</option>
+                    <option>itme4</option>
+                </select>
+            </div>
+            <div>
+                <textarea role="5" cols="20"></textarea>
+            </div>
+            
+            <div>
+                <input type="submit" value="입력">
+                <input type="reset" value="취소">
+                <input type="button" value="버튼">
+            </div>
+            
+            <div>
+                <button type = "submit">입력2</button>
+                <button type = "reset">취소2</button>
+                <button type = "button">버튼2</button>
+            
+            </div>
+        </form>
+        
+    </body>
+</html>
