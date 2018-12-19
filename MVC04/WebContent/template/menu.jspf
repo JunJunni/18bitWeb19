@@ -1,0 +1,10 @@
+
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+		<div id="menu">
+			<a href="/mvc04/index.do">HOME</a>
+			<a href="/mvc04/intro.do">INTRO</a>
+			<a href="/mvc04/bbs/list.do">BBS</a>
+			<a href="#">LOGIN</a>
+		</div>
+		<div id="content">
