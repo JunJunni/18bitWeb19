@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css"></style>
+	<script type = "application/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            $(document).ready(function(){
+               $(document).on('click','a',function(){ //이벤트대상은 document ->따라서 return false는 document에 달림! 주의! 
+                   alert('naver');
+                   return false;
+               }); 
+            });
+        </script>
+    </head>
+    <body>
+        <a href="http://naver.com">link</a>
+    </body>
+</html>

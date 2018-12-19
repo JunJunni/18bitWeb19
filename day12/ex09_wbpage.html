@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+            #menu{
+                
+            }
+            #menu>ul{
+                padding: 0px;
+            }
+            #menu>ul>li{
+                margin: 0px 10px;
+                float: left;
+                list-style: none;
+                text-align: center;
+                width: 100px;
+                height: 50px;
+            }
+            #menu>ul>li>ol{
+                padding: 0px;
+                display: none;
+            }
+            #menu>ul>li>ol>li{
+                list-style: none;  
+            }
+            #menu>ul>li>ol>li>a{
+                display: block;
+                width: 100px;
+                height: 50px;
+                background-color: azure;
+                color: cornflowerblue;
+                text-decoration: none;
+                text-align: center;
+            }
+            #content{
+                clear: both;
+            }
+            #content>#imgs{
+                width: 600px;
+                height: 300px;
+                overflow: hidden;
+                
+            }
+            #content>#imgs>ul{
+                width: 1920px;
+                padding: 0px;
+            }
+            #content>#imgs>ul>li{
+                float: left;
+                list-style: none;               
+            }
+            .article{
+                clear: both;
+                width: 200px;
+                background-color: gainsboro;
+            }
+            .article:first-child{
+                float: left;
+            }
+            .article:last-child{
+                float: right;
+            }
+        </style>
+	   <script type = "application/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            $(document).ready(function(){
+                $('#menu>ul>li').mouseenter(function(){
+                    $(this).children('ol').stop().slideDown(1000);
+                }).mouseleave(function(){
+                    $(this).children('ol').stop().slideUp(1000); //clearqueue줘도 상관없을듯! 
+                });
+                window.setInterval(imgNext,5000);
+            });
+            
+            function imgNext(){
+                $('#content>#imgs>ul').animate({margin:'0px -200px'},3000,'swing',function(){
+                    $('#content>#imgs>ul').children().first().appendTo('#content>#imgs>ul');
+                     $('#content>#imgs>ul').css({margin:'0px'});
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <div>
+            <div id = "header">
+            <h1>비트교육센터</h1>
+            </div>
+            <div id = "menu">
+                <ul>
+                    <li>menu1
+                        <ol>
+                            <li><a href="#">menu1-1</a></li>
+                            <li><a href="#">menu1-2</a></li>
+                            <li><a href="#">menu1-3</a></li>
+                            <li><a href="#">menu1-4</a></li>
+                        </ol>
+                    </li>
+                    <li>menu2
+                        <ol>
+                            <li><a href="#">menu2-1</a></li>
+                            <li><a href="#">menu2-2</a></li>
+                            <li><a href="#">menu2-3</a></li>
+                            <li><a href="#">menu2-4</a></li>
+                        </ol>
+                    </li>
+                    <li>menu3
+                        <ol>
+                            <li><a href="#">menu3-1</a></li>
+                            <li><a href="#">menu3-2</a></li>
+                            <li><a href="#">menu3-3</a></li>
+                            <li><a href="#">menu3-4</a></li>
+                        </ol>
+                    </li>
+                    <li>menu4
+                        <ol>
+                            <li><a href="#">menu4-1</a></li>
+                            <li><a href="#">menu4-2</a></li>
+                            <li><a href="#">menu4-3</a></li>
+                            <li><a href="#">menu4-4</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id= "content">
+                <h1>환영합니다.</h1>
+                <div id = "imgs">
+                    <ul>
+                        <li><img src = "imgs/small1.jpg"></li>
+                        <li><img src = "imgs/small2.jpg"></li>
+                        <li><img src = "imgs/small3.jpg"></li>
+                        <li><img src = "imgs/small4.jpg"></li>
+                        <li><img src = "imgs/small5.jpg"></li>
+                        <li><img src = "imgs/small6.jpg"></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class = "article"></div>
+            <div class = "article"></div>
+            <div id = "footer">
+                비트캠프 나붋나불~~ 
+            </div>
+        </div>
+    </body>
+</html>

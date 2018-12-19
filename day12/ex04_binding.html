@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css"></style>
+	<script type = "application/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            $(document).ready(function(){
+                $('button').on('click',function(){
+                    $('ul').append('<li>'+$('input').val()+'</li>');
+                });
+                //이벤트 바인딩
+//                1.0~ <1.4.2 .bind()
+//                1.3~    $(target).live(이벤트종류,콜백)
+//                1.4.2 + 1.7 .delegate(타겟,이벤트종류,콜백)
+//                1.7 ~        .on(이벤트종류, 타겟,콜백)
+                $(document).on('click' ,'ul>li',function(){ //중간 'ul>li'요소는 실행될 이벤트의 대상을 이야기한다.
+                    alert($(this).text()+'click');
+                });
+                
+            });
+        </script>
+    </head>
+    <body>
+        <h1>이벤트 문제상황 발생</h1>
+        <input type="text"/><button>add</button>
+        <ul>
+            <li>aaa</li>
+        </ul>
+    </body>
+</html>

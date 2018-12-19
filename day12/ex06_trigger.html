@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css"></style>
+	<script type = "application/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            $(document).ready(function(){
+                    $('button').eq(0).on('click',function(){
+                        $('div').append('1<br/>');
+//                        $('button').eq(1).trigger('click');
+//                        $('button').eq(1).click(); //대부분 클릭을 사용하지만...
+                    }).next().on('click',function(){
+//                        $('div').append('2<br/>');
+                    });
+                $(document).on('click','button:eq(1)',obj,function(e){
+                    $('div').append(e.data+'2<br/>');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>trigger</h1>  
+        <button>btn1</button>
+        <button>btn2</button>
+        <div></div>
+    </body>
+</html>

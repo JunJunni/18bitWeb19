@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css"></style>
+	<script type = "application/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            $(document).ready(function(){
+                $('input').on('focusin focusout dblclick',callback); //이벤트 한꺼번에 할 수 있땅!! 
+            });
+            function callback(){
+                $('div').append('event<br/>');
+            };
+        </script>
+    </head>
+    <body>
+        <input type="text">
+        <button>click</button>
+        <div></div>
+    </body>
+</html>
