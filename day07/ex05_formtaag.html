@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel = "stylesheet" type="text/css">
+            label{
+                width: 40%;
+                display:inline-block;
+/*                text-align: right;*/
+            }
+            input{
+                width:60%;
+            }
+            form{
+                width:500px;
+            }
+        
+        </style>
+        
+        <script type="application/javascript">
+//            function sub(){
+//                console.log('submit');
+//                return false;
+//            }
+            var form,id;
+            window.onload=function(){
+                form=document.querySelector('form');
+                id=document.querySelectorAll('input')[0];
+                
+                form.onsubmit=function(){
+                    if(id.value.trim()=='') return false;
+                    if(pw.value.length<6) reutrn false;
+                    if(!pwCheck(pw.value))return false;
+                    
+                    
+                    return true;
+                };
+                
+            };
+            function pwCheck(msg){
+                for(var i=0; i<msg.length; i++){
+                    var su = msg.charCodeAt(i);
+                    var chk1 = false; //대문자
+                    var chk2 = false; //소문자
+                    var chk3 = false; //숫자
+                    var chk4 = false; //특수문자
+                    if(su>=48&&su<=57){chk3=true;}
+                    if(su>=65&&su<=90){chk1=true;}
+                    if(su>=97&&su<=122){chk2=true;}
+                    if(su>=33&&su<=38){chk1=true;}
+                }  
+                return chk1&&ch2&&ch3&&ch4;
+            };
+        </script>
+    </head>
+    <body>
+        <h1>회원가입</h1>
+<!--                                            인라인방식을 사용했을때 이렇게 한다.-->
+<!--        <form action ="ex04_ele.html" onsubmit="return sub();">-->
+        
+            <form action ="ex04_ele.html">
+            <label for="pw">id</label>
+            <input type = "text" name ="id" id="id"/>
+            <label for="pw">pw</label>
+            <input type = "text" name ="pw" id="pw"/>
+                <label for="pw">re</label>
+                <input type = "text" name ="re" id="re"/>
+            <label for="pw">name</label>
+            <input type = "text" name ="name" id="nane"/><br><br>
+            <button>전송</button>
+            <button>취소</button>
+        </form>
+    </body>
+</html>

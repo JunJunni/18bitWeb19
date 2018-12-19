@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            div{
+               width:100px;
+                height: 100px;
+                background-color: azure;
+            }
+        </style>
+        <script type = "application/javascript">
+            var input,btn,evn;
+            window.onload=function(){
+//                input=document.querySelector('input');
+//                
+//                input.onkeydown=function(e){
+//                    evn=e;
+//                    console.log('down-'+input.value);
+//                };
+//                
+//                 input.onkeypress=function(e){
+//                    console.log('press-'+input.value);
+//                };
+//                
+//                input.onkeyup=function(e){
+//                    //실제 값이 입력되는 이벤트는 up!
+//                    console.log('up-'+input.value);
+//                };
+                
+                
+                button=document.querySelector('button');
+                
+                button.onkeydown=function(e){
+                    evn=e;
+                    console.log('down-'+button.value);
+                };
+                
+                 button.onkeypress=function(e){
+                    console.log('press-'+button.value);
+                };
+                
+                button.onkeyup=function(e){
+                    //실제 값이 입력되는 이벤트는 up!
+                    console.log('up-'+button.value);
+                };
+            };
+               
+        </script>
+    </head>
+    <body>
+        <input type="text"/>
+        <button>input</button>
+        <div></div>
+    </body>
+</html>

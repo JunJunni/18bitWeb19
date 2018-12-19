@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type = "application/javascript">
+            var chks,radios,input,sel,evn;
+            window.onload=function(){
+                input=document.querySelector('input[type="text"]');
+                chks=document.querySelectorAll('input[type="checkbox"]');
+                radios=document.querySelectorAll('input[type="radio"]');
+                
+                chks[0].onchange=function(){
+                    console.log('chk1',chks[0].checked);
+                };
+                chks[1].onchange=function(){
+                    console.log('chk2',chks[1].checked);
+                };
+                chks[2].onchange=function(){
+                    console.log('chk3',chks[2].checked);
+                };
+                
+                radios[0].onchange=function(){
+                    console.log('radi1',radios[0].checked);
+                    console.log('radi2',radios[1].checked);
+                    console.log('raid3',radios[2].checked);
+                };
+                radios[1].onchange=function(){
+                    console.log('radi1',radios[0].checked);
+                    console.log('radi2',radios[1].checked);
+                    console.log('raid3',radios[2].checked);
+                };
+                radios[2].onchange=function(){
+                    console.log('radi1',radios[0].checked);
+                    console.log('radi2',radios[1].checked);
+                    console.log('raid3',radios[2].checked);
+                };
+                sel = document.querySelector('select');
+                opts=document.querySelectorAll('option');
+                
+                sel.onchange=function(){
+                    console.log('select:',sel.value);
+                    console.log('option1:',opts[0].selected);
+                    console.log('option2:',opts[1].selected);
+                    console.log('option3:',opts[2].selected);
+                    
+                };
+                input.onchange=function(){
+                    //input의 상태변호ㅏ->값입력후, enter
+                    console.log(input.value);
+                };
+                
+                input.onfocus=function(e){
+                    
+                    console.log('focus');
+                    //이건 그냥 박스 지워버리는거고.. 
+                    //input.value="";
+                    
+                    //txt박스엥 포커스가 온다면 선택되어야 하죵,, 그래야 키보드 바로입력가능
+                    input.selectionStart=0;
+                    input.selectionEnd=input.value.length;
+                    
+                };
+                input.onblur=function(){
+                    console.log('out of focus');
+                    //포커스가 빠져나갔을대는 다시 값을 입력하세요 해야함^^!
+                    if(input.value=="")input.value="값을 입력하세요";
+                };
+                
+                
+            };
+        </script>
+    </head>
+    <body>
+        <h1>상태변화</h1>
+        <div><input type = "text" value="값을 입력 해주세요."/></div>
+        <div>
+            <input type="checkbox" name="chk1"/>c1
+            <input type="checkbox" name="chk2"/>c2
+            <input type="checkbox" name="chk3"/>c3
+        </div>
+        <div>
+            <input type="radio" name="radi1"/>r1
+            <input type="radio" name="radi2"/>r2
+            <input type="radio" name="radi3"/>r3
+        </div>
+        <div>
+            <select>
+                <option>item1</option>
+                <option>item2</option>
+                <option>item3</option>
+            </select>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="application/javascript">
+           
+            function myload(){
+                console.log("문서 로딩 시점");
+                console.log(
+                    document.getElementsByTagName('h1')
+                           );
+                var btn=document.getElementsByTagName("button")[0];
+                btn.onclick=bthFunc; // callback!! 어렵다;;; 
+                //인자로 전달하는것이 아니라 이름이 필요함!! 
+                //onclick이 일어난 시점에 btnfunc가 실행되는것 
+                //**btnFunc() 가 아니라 btnFunc임! 
+            };
+
+            function bthFunc(){
+                console.log('버튼 클릭');
+                var p = document.querySelector('p');//바꿀 엘리먼트
+                var input=document.querySelector('input');//입력받은 엘리먼트
+                p.innerText=input.value; //입력받은 값을 바꾼다
+                input.value=''; //바꾼후 입력텍스트박스는 비우도록 한다. 
+                
+            };
+            
+            window.onload=myload;
+        </script>
+    </head>
+    <body>
+        <h1>제목</h1>
+        <p>내용</p>
+        <input type="text"/>
+        <button>버튼</button>
+    </body>
+</html>

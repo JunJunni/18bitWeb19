@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type = "text/javascript">
+            var p,re;
+            function getTime(){
+                var t = new Date();
+                var h=t.getHours();
+                var m=t.getMinutes();
+                var s=t.getSeconds();
+                p.innerText=h+':'+m+':'+s;
+                re=window.setTimeout(getTime,1000);
+            }
+            function fileload(){
+                p=document.getElementsByTagName('p')[0];//복수로 배열요소에 담아서 준다 Element's'
+                //re=window.setInterval(getTime,1000); //setInterval : 반복적 수행
+            } 
+            function myStop(){
+                window.console.log('push stop_btn');
+                //window.clearInterval(re);
+                window.clearTimeout(re);
+            }
+            function myStart(){
+                window.console.log('start click');
+                re=window.setTimeout(getTime,1000);//setTimeout : 한번만 수행
+                
+            }
+        </script>
+    </head>
+<!--    p태그가 생성 되기전 엘리먼트를 불러냄으로 온로드(onload) 해줘야함-->
+    <body onload="fileload();"> 
+    <p>시간</p>
+        <button onclick="myStart()">start</button>
+        <button onclick="myStop()">stop</button>
+    </body>
+</html>

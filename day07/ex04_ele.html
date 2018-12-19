@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel = 'stylesheet' type="text/css">
+            div{
+                width: 50px;
+                height: 50px;
+                background-color: aliceblue;
+            }
+        </style>
+        <script type="application/javascript">
+            var div,a;
+            window.onload=function(){
+                div=document.querySelector('div');
+                a=document.querySelector('a');
+                
+                div.onclick=function(){
+                    concsole.log('div click');
+                };
+                
+                a.onclick=function(){
+                    console.log(a.href);
+                    return false;
+                };
+            };
+        
+        </script>
+    </head>
+    <body>
+        <div></div>
+        <a href="http://naver.com">link</a>
+    </body>
+
+</html>

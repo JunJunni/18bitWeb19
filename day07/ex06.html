@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+                margin-top: 15px;
+                color: c
+                
+            }
+        </style>
+        <script type = "application/javascript">
+            var btn1,btn2,btn3,div;
+            window.onload=function(){
+                div=document.querySelector('div');
+                //css 에서 사용하던것을 그대로 일치시키기위해 사용하는 querySelector.
+                
+                div.style.width=50+'px';
+                 div.style.height=50+'px';
+                btn1=document.querySelector('button:nth-child(1)');
+                btn2=document.querySelector('button:nth-child(2)');
+                btn3=document.querySelector('button:nth-child(3)');
+                
+                btn1.onclick=function(){
+                    console.log('1');
+//                    style="background-color:red"
+                    div.style.backgroundColor='crimson';
+                 div.style.width=50+'px';
+                 div.style.height=50+'px';
+                };
+                
+                btn2.onclick=function(){
+                    console.log('2');
+                    div.style.backgroundColor='crimson';
+                 //   var plus =10;
+                    div.style.width=parseInt(div.style.width)+10+'px';
+                    div.style.height=parseInt(div.style.height)+10+'px';
+                };
+                btn3.onclick=function(){
+                    console.log('3');
+                    div.style.backgroundColor='crimson';
+                    div.style.width=parseInt(div.style.width)-10+'px';
+                    div.style.height=parseInt(div.style.height)-10+'px';
+                };
+            };
+            
+        </script>
+    </head>
+    <body>
+        <button>초기화</button>
+        <button>+10</button>
+        <button>-10</button>
+        <div></div>
+    </body>
+</html>

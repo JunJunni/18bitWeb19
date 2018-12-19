@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel = 'stylesheet' type="text/css">
+            body>div{
+                border: 1px solid black;
+                width: 400px;
+                height: 400px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            div>div{
+                background-color: mediumaquamarine;
+                width: 50px;
+                height: 50px;
+                position: relative;
+                top: 0px;
+                left: 0px;
+            }
+        
+        </style>
+        <script type = "text/javascript">
+            var div,eve;
+            var x=8, y=8;
+            var tempX, tempY;
+            
+            window.onload=function(e){
+                div=document.querySelector('body>div');
+                x=div.style.left='0px'; //초기화
+                y=div.style.top='0px';
+                
+                ele=document.querySelector('div>div');
+                ele.style.top='0px';//초기화
+                ele.style.left='0px';
+               console.log(x,y);
+               // div.onclick=function(e){
+//                    //클릭이벤트
+//                    //client x,y
+//                    //offset x,y
+//                    //page x,y
+//                    //screen x,y -모니터기준
+//                    //x,y 
+//                    console.log('클릭');
+//                    ele.style.left=e.x-x-25+"px";
+//                    ele.style.top=e.y-y-25+"px";
+            //  };
+//                div.onmouseover=function(){
+//                    //마우스가 위에 올라왔을때
+//                };
+//                div.onmouseout=function(){
+//                    //마우스가 나갔을때
+//                };
+                div.onmousedown=function(e){
+                    //마우스로찍고 나감
+                    console.log('down: '+e.x,e.y);
+                    tempX=e.x;
+                    tempY=e.y;
+                    div.onmousemove=myMove;
+                };
+               div.onmouseup=function(e){
+                   div.onmousemove=null;
+                   console.log('up');
+//                    //마우스들어와서 찍고업?
+//                    console.log('up');
+//                    tempX=e.x-tempX;
+//                    tempY=e.y-tempY;
+//                    ele.style.top=parseInt(ele.style.top)+tempY+'px';
+//                    ele.style.left=parseInt(ele.style.left)+tempX+'px';
+                }
+         };
+            function myMove(e){
+                 console.log('mymove: '+tempX,tempY );
+                    ele.style.left=e.x-tempX+'px';
+                    ele.style.top=e.y-tempY+'px';
+                    
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <div></div>
+        </div>
+    </body>
+</html>
