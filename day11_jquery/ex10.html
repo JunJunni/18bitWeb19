@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+            div>label{
+                color: coral;
+
+            }
+            .err{
+                font-size:0.8em;
+                font-style: italic;
+                color: red;
+            }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            var cnt;
+            $(document).ready(function(){
+              $('form>div').filter(function(idx){
+               if(idx<4)return true;
+                }).children('input').blur(function(){});
+                    
+                $(':radio').change(function(){
+                    target=this;
+                    $(this).parent().children("input").each(function(idx,ele){
+                        if(target==ele)console.log('radio:'+idx);
+                    });
+                    
+                });
+                
+                $('form').submit(function(e){
+                    $(".err").remove();
+                    var result=true;
+//                    console.log('폼태그 작동')
+//                    return false;
+
+                    $('form>div').filter(function(idx){
+                        if(idx<4)return true;
+                    }).children('input').each(function(){
+                        if($(this).val()==""){
+                            $(this).after('<span class="err">빈값을 허용하지 않음</span>');
+                            result=false;
+                        }
+                    }).eq(2).each(function(){
+//                        if($(this)).val()!=$(this).parent().prev().children('input').val()) return false;
+                    });
+                    return false;
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>회원가입</h1>
+        <form action = "ex09_ready.html" method="get">
+            <div>
+                <label for = "id">id</label>
+                <input type="text" id="id">
+            </div>
+            
+            <div>
+                <label for = "pw">pw</label>
+                <input type="password" id="pw">
+            </div>
+            
+            <div>
+                <label for = "re"></label>
+                <input type="password" id="re">
+            </div>
+            <div>
+                <label for = "name">name</label>
+                <input type="text" id="name">
+            </div>
+            <div>
+                <label for = "tel">tel</label>
+                <input type="tel" id="tel">
+            </div>
+            <div>
+                <label for = "email">email</label>
+                <input type="email" id="email">
+            </div>
+            <div>
+                <label for = "url">home</label>
+                <input type="url" id="url">
+            </div>
+        
+            <div>
+                <input type ="checkbox" id = "ck1"><label for="ch1">item1</label>
+                <input type ="checkbox" id = "ck2"><label for="ch2">item2</label>
+                <input type ="checkbox" id = "ck3"><label for="ch3">item3</label>
+            </div>
+            
+            <div>
+                <input type ="radio" name ="ra" id = "ra1"><label for="ra1">item1</label>
+                <input type ="radio" name ="ra" id = "ra2" checked><label for="ra2">item2</label>
+                <input type ="radio" name ="ra" id = "ra3"><label for="ra3">item3</label>
+            </div>
+        
+            <div>
+                <select>
+                    <option>item1</option>
+                    <option>item2</option>
+                    <option>item3</option>
+                    <option>item4</option>
+                
+                </select>
+            </div>
+            <div>
+                <button type = "submit">submit</button>
+                <button type="reset">reset</button>
+            </div>
+        </form>
+    </body>
+</html>

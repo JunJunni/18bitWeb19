@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+            img{
+                width: 300px;
+                height: 500px;
+                display: none;
+            }
+            img:nth-child(1), img:nth-child(2), img:nth-child(3){
+                display: inline-block;
+            }
+        </style>
+        <script type="application/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            window.onload = function(){
+                //$('img').last().after($('img').first()); //첫번째꺼를 마지막에 붙여벌임
+                
+//                $('img:eq(0)').insertAfter('img:eq(5)');
+                window.setInterval(function(){ //이렇게 함수 쓰는게 callback인듯
+                      $('img:first-child').insertAfter('img:last-child');             
+                                   },2000);
+                
+            };
+        
+        </script>
+    </head>
+    <body>
+        <h1>캐러셀</h1>
+        <div>
+            <img alt="" src="imgs/big1.jpg"/><img alt="" src="imgs/big2.jpg"/><img alt="" src="imgs/big3.jpg"/><img alt="" src="imgs/big4.jpg"/><img alt="" src="imgs/big5.jpg"/>
+            <img alt="" src="imgs/big6.jpg"/>
+        </div>
+    </body>
+</html>

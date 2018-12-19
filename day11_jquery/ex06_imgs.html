@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+            img{
+                width: 200px;
+                height: 300px;
+                display: none;
+            }
+            img:nth-child(2), img:nth-child(3),img:nth-child(4){
+                display: inline-block;
+            }
+        </style>
+        <script type="application/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            window.onload = function(){
+                prev=document.getElementById('#prev');
+                next=document.getElementById('#next');
+                window.setInterval(function(){ //이렇게 함수 쓰는게 callback인듯
+                      $('img:first-child').insertAfter('img:last-child');             
+                                   },2000);
+                
+                
+                prev.onclick=function(){
+                    return false;
+                };
+                
+                next.onclick=function(){
+                    return false;
+                };
+                
+            };
+        
+        </script>
+    </head>
+    <body>
+        <h1>캐러셀</h1>
+        <div>
+            <a href="#" id="prev">prev</a> 
+            <img alt="" src="imgs/big1.jpg"/>
+            <img alt="" src="imgs/big2.jpg"/>
+            <img alt="" src="imgs/big3.jpg"/>
+            <img alt="" src="imgs/big4.jpg"/>
+            <img alt="" src="imgs/big5.jpg"/>
+            <img alt="" src="imgs/big6.jpg"/>
+            <a href="#" id="next">next</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css"></style>
+        <script type="application/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            window.onload = function(){
+//                $('ul').html('<li>item0</li>'+$('ul').html()); 앞에 끼워넣기.. 벗 중간에 끼워넣고 싶으면..?
+                //요로코롬 하면된다.
+//                $('li').eq(1).after('<li>item2-3</li>');
+//                $('li').eq(1).before('<li>item1-2</li>');
+//                $('li').last().after($('p'));
+//                $('li').last().after('<p>');
+                $('<li>add</li>').insertAfter('li:eq(3)');//위치가 바뀐뎅
+            };
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Subject</h1>
+            <p>content</p>
+            <ul>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+                <li>item4</li>
+            </ul>
+        </div>
+        
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css"></style>
+        <script type ="application/javascript" src="js/jquery-1.12.4.js"></script>
+        <script type = "application/javascript">
+            window.onload = function(){
+                var lis=document.querySelectorAll('li');
+//                for(var i=0; i<lis.length; i++){
+//                    var li=lis[i];
+//                    li.innerText='edit'+i;
+//                }
+                ////////////////////////////////////
+//                lis.forEach(function(ele,idx){
+//                    ele.innerText='forEach'+idx;
+//                });
+                var arr = ['item1','item2','item3','item4'];
+//                for(var li of arr) 값 리턴
+//                for(var li in arr) 인덱스 리턴
+                /////////////////////////////////////
+                $('li').each(function(idx,ele){
+//                    ele.innerText='jq'+idx; 이것은 jquery 객체가 아니다
+                    $(ele).text('edit'+idx);
+                    console.log(this==ele);
+                });
+              //////////////////////////////////////  
+                $('li').filter(function(idx){
+                    console.log(ele==this,ele,this);// 다 ture 이다. 
+//                    if(idx%2==0)return true;
+                    if($(ele).hasClass('cl1')) return true;
+                }).text('edit');
+                ///////////////////////////
+                //아래처럼 처리를했는데 a링크를 부여해야만 할때 이렇게 처리하면 된다.
+                
+                $('li').html(function(idx,ele){
+                    console.log(ele.this);
+                    return '<a href="'+ele+'">['+ele+']</a>';
+                });
+                
+                
+            };
+        </script>
+    </head>
+    <body>
+        <h1>배열</h1>
+        <ul>
+            <li>http://naver.com</li>
+            <li>http://google.com</li>
+            <li>http://daumn.net</li>
+        </ul>
+    </body>
+</html>
