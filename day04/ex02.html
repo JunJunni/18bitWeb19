@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            table{
+/*                border: 1px solid blackl;*/
+                width: 500px;
+/*                border-spacing: 0px;*/
+                border-collapse: collapse;/*하나로 합하면서,셀사이의 간격을 없앰*/
+                margin: 0px auto;
+            }
+            th{
+                border-top: 1px solid black;
+            }
+            td,th{
+                border-bottom: 1px solid black;
+            }
+            tr:nth-child(2n){
+                background-color: darkcyan;
+            }
+            h1{
+                background-color: aquamarine;
+                width: 300px;
+                height: 100px;
+                text-align: center;
+                line-height: 100px;
+                margin: 0px auto 50px auto;
+                border-width: 10px;
+                border-color: bisque;
+                border-style: dotted;
+                border-radius: 50px 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>TABLE</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>1열</th>
+                    <th>2열</th>
+                    <th>3열</th>          
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1줄</td>
+                    <td>1줄</td>
+                    <td>1줄</td>          
+                </tr>
+                
+                <tr>
+                    <td>2줄</td>
+                    <td>2줄</td>
+                    <td>2줄</td>         
+                </tr>
+                <tr>
+                    <td>3줄</td>
+                    <td>3줄</td>
+                    <td>3줄</td>         
+                </tr>
+             </tbody>       
+        </table>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body>*{
+/*    border: 1px solid black;*/
+}
+header>h1{
+    background-image: url(../imgs/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -999px;
+}
+nav{
+    height: 35px;
+    background-color: aliceblue;
+}
+nav>ul{
+    width: 400px;
+    height: 35px;
+    margin: auto;
+}
+nav>ul>li{
+    width: 100px;
+    height: 35px;
+    float: left; /*메뉴 설정을 위해 사용. */
+    list-style: none;
+    text-align: center;
+}
+nav>ul>li>a{
+    height: 35px;
+    line-height: 35px; /*    아래의 이건 칸에서 text를 중간으로 정렬하기 위해서*/
+    display: block;
+    text-decoration: none;
+    color: black;
+    border-right-color: gainsboro; /*박스의 오른쪽에만 줄칠하기 엑셀이라 생각하면됨 */
+    border-right-style: solid;
+    border-right-width: 3px;
+    
+}
+nav>ul>li:first-child>a{
+    height: 35px;
+    border-left-color: gainsboro;
+    border-left-style: solid;
+    border-left-width: 3px;
+}
+nav>ul>li>a:hover,nav>ul>li>a:active{
+    color: crimson;
+    font-weight:bold;
+}
+section{
+    clear: both;
+    width: 65%;
+    float: left;
+    padding-bottom:100px ;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+aside{
+    width:29%;
+    float:left;
+}
+aside>a{
+    display: block;
+}
+aside>a:first-child{
+    height: 100px;
+    background-image: url(../imgs/daum.PNG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+}
+aside>a:last-child{
+    height: 100px;
+    background-image: url(../imgs/google.PNG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -999px;
+}
+footer{
+    clear: both;
+    text-align: center;
+    background-color: cornsilk;
+}

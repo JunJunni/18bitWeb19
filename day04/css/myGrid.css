@@ -1,0 +1,81 @@
+body{
+    margin: 0px;
+}
+@media screen and (max-width:480px){
+        .container{
+         width: 100%;      
+}
+    .container .mgrid0{display: none;}
+    .container .mgrid1{width: 8.333%}
+    .container .mgrid2{width: 16.666%}
+    .container .mgrid3{width: 25%}
+    .container .mgrid4{width: 33.333%}
+    .container .mgrid5{width: 41.666%}
+    .container .mgrid6{width: 50%}
+    .container .mgrid7{width: 58.333%;}
+    .container .mgrid8{width: 66.666%;}
+    .container .mgrid9{width: 75%;}
+    .container .mgrid10{width: 83.333%x;}
+    .container .mgrid11{width: 91.666%;}
+    .container .mgrid12{width: 100%;}
+}
+@media screen and (min-width: 480px) and (max-width:959px){
+    .container{
+         width: 100%;      
+}
+    .container .grid1{width: 8.333%}
+    .container .grid2{width: 16.666%}
+    .container .grid3{width: 25%}
+    .container .grid4{width: 33.333%}
+    .container .grid5{width: 41.666%}
+    .container .grid6{width: 50%}
+    .container .grid7{width: 58.333%;}
+    .container .grid8{width: 66.666%;}
+    .container .grid9{width: 75%;}
+    .container .grid10{width: 83.333%x;}
+    .container .grid11{width: 91.666%;}
+    .container .grid12{width: 100%;}
+}
+
+@media screen and (min-width:960px){
+    .container{
+        width: 960px;
+        margin: 0px auto;
+}
+    .container .grid1{width: 80px;}
+    .container .grid2{width: 160px;}
+    .container .grid3{width: 240px;}
+    .container .grid4{width: 320px;}
+    .container .grid5{width: 400px;}
+    .container .grid6{width: 480px;}
+    .container .grid7{width: 560px;}
+    .container .grid8{width: 640px;}
+    .container .grid9{width: 720px;}
+    .container .grid10{width: 800px;}
+    .container .grid11{width: 880px;}
+    .container .grid12{width: 960px;}
+}
+
+
+.row{
+    clear: both;
+}
+.grid1,.grid2,.grid3,.grid4,
+.grid5,.grid6,.grid7,.grid8,
+.grid9,.grid10,.grid11,.grid12{
+    float: left;
+/*    background-color: palevioletred*/
+/*
+    border-width: 1px;
+    border-style: dotted;
+    border-color: black;
+*/
+    box-sizing: border-box;
+    
+}
+
+
+
+
+
+

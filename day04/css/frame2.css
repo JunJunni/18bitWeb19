@@ -1,0 +1,81 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+/*    top: 100px;*/
+}
+nav,section,aside,footer{
+    top: 100px;
+    margin: 0px auto;
+}
+
+nav,section,footer{
+    width: 900px;
+}
+section{
+    width: 800px;
+}
+header{
+    top: 0px;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+}
+header>h1{
+    background-image: url(../imgs/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: 150px;
+    line-height: 50px;
+}
+nav{
+    background-color: crimson;
+    
+}
+nav>ul{
+    width: 417px;
+    margin: 0px auto;
+}
+nav>ul>li{
+    background-color: cadetblue;
+    display: inline-block;
+    width: 100px;
+  
+}
+nav>ul>li>a{
+    display: block;
+    text-decoration: none;
+    color: black;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+}
+section{
+    padding: 10px 100px 50px 100px;
+}
+aside{
+    position: relative;
+    left: 550px;
+    width: 150px;
+}
+aside>a{
+    display: block;
+    height: 50px;
+    width: 100px;
+    position: fixed;
+    text-indent: 9999px;
+   
+}
+
+aside>a:first-child{
+    background-image: url(../imgs/daum.PNG);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 150px;
+}
+aside>a:last-child{
+    background-image: url(../imgs/google.PNG);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 200px;
+}
