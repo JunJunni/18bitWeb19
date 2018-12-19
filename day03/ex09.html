@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            div>div{
+                width: 100px;
+                height: 50px;
+            }
+            /*float 쓰는이유 텍스트의 개행때문에 편하게 사용합니다.~*/
+            div>div:first-child{
+                float: left; /*이 갹간 포토샵에 레이어 쓰는기분? 그냥 띄운다는데*/
+                background-color: cadetblue;
+            }
+            div>div:first-child+div{
+                clear: left; /*위의 float에 영향을 받지 않기위해 사용하는것*/
+                background-color: crimson;
+            }
+            div>div:first-child+div+div{
+                background-color: cornsilk;
+            }
+            div>div:first-child+div+div+div{
+                background-color: cornflowerblue;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>item1</div>
+            <div>item2</div>
+            <div>item3</div>
+            <div>item4</div>
+        </div>
+    </body>
+</html>

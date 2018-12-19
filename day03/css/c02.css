@@ -1,0 +1,33 @@
+ header,nav,section,footer{
+     border: 1px solid red;
+    width: 900px;
+    }
+body>header,body>div, body>footer{
+    margin: 0px auto;
+}
+nav,section{
+    display: inline-block;
+}
+body>div{
+    vertical-align: top;
+}
+
+nav{
+    width: 200px;
+    height: 500px;
+}
+
+nav a {
+    width 200px;
+    text-align: center;
+    line-height: 80px;
+    background-color: gainsboro;
+    margin: 5px 0px;
+    display: block;
+    height: 50px;
+    border-bottom: 2px solid black;
+}
+section {
+    width: 692px;
+    height: 500px;
+}

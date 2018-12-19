@@ -1,0 +1,91 @@
+<!doctype>
+<!--족가틍ㄴ 월요일 !! 11.26 css 와 html -->
+<html>
+
+    <head>
+    <meta charset="utf-8">
+    <title>form 모델</title>
+<!--    화면에 규칙적인 표현을 위해 css 사용-->
+        <style>
+            label{
+                width:100px;
+                display: inline-block;
+            }
+/*            br+label+input{*/
+               input[type='email'],input[type = 'password']{   
+/*                br태그 다음에 등장하는 라벨의 다음에 인풋이 왔을 경우만 선택*/
+                color: crimson;
+                border-color: gainsboro;
+                border-style: solid;
+                background-color: gainsboro;
+            }
+        
+        </style>
+    </head>
+    
+    <body>
+    <h1>회원가입</h1>
+        <form action="">
+            <p>
+<!--            html에서는 테이블 안씀다! -->
+                <label for="pa1"> name </label>
+                <input type ="text" name = "param1" id="pa1" required/><br/>
+<!--                라벨과 인풋을 묶어주기위해 id 부여 하고 label에 for를 통해 묶는다.  -->
+<!--                왜때문에 묶는가! 웹 별로 모바일일때! 다른 퍼포먼스를 보인다-->
+                <label for = "pw">pw</label>
+                <input type = "password" id = "pw" required /><br/>
+<!--                자판 전화번호로 입력 할 수 있게하는거 -->
+                <label>tel</label>
+                <input type = "tel"/><br/>
+                
+                <label>email</label>
+                <input type = "email"/><br/>
+                
+                <label>home</label>
+                <input type = "url"/><br/>
+             
+                <label> number</label>
+                <input type = "number" value = "0" min="-50" max = "50"/><br/>
+                
+                <label>range</label>
+<!--                defalut 값을 정해 줄 수 있다.-->
+                <input type = "range" value = "0" max = "50"/><br/>
+                
+                <input type="checkbox" name ="ch1"/>
+                <label>item1</label>
+                <input type="checkbox" name ="ch2"/>
+                <label>item2</label>
+                <input type="checkbox" name ="ch3"/>
+                <label>item3</label><br/>
+                
+                <input type = "radio" name ="ra1"/><label>item1</label>
+                <input type = "radio" name ="ra2"/><label>item2</label>
+                <input type = "radio" name ="ra3"/><label>item3</label>
+                <br/>
+                <select name = "sel">
+                    <option>item1</option>
+                    <option>item2</option>
+                    <option>item3</option>
+                    <option>item4</option>
+                </select>
+                
+            </p>
+            <input type = "file" name = "myfile"/><br/> <!--//파일 이름이 넘어감--> 
+            <input type ="date" name = "ddate"/><br/>
+            <input type = "datetime" name= "ddatetime"/><br/>
+            <input type = "time" name = "time"/>
+            <input type="color" name = "color"/>
+<!--            color는 16진수로 넘어감-->
+            <br/>
+            <input type = "submit" value="전달"/>
+<!--            submit과 같은 역할을 할 수 있도록 만든 button tag-->
+            <button type = "submit">전달2</button>
+<!--            button을 쓰더라도 타입을 정해줘야 한다 아니면 문제의 소지가 많다! 그리고 submit 말고 다른타입은 쓰지마-->
+            <button>전달3</button>
+            <button>전달4</button>
+            <input type = "reset" value="취소"/>
+        <!--//input에 name 속성을 주면 노출이 되기 때문에 절대로 노노해 -->
+        </form>
+    
+    </body>
+</html>

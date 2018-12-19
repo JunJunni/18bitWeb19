@@ -1,0 +1,67 @@
+<!doctype>
+<head>
+    <meta charset="utf-8"/>
+    <style>
+        body>div{
+            border-width: 1px;
+            border-color: lightskyblue;
+            border-style: solid;
+            width: 100px;
+            height: 300;
+        }
+        body>div>div{
+            width: 80px;
+            height: 80px;
+            border-width: 1px;
+            border-color: lightskyblue;
+            border-style: solid;
+        }
+        
+        body>div>div>div{
+            border-width: 1px;
+            border-color: lightskyblue;
+            border-style: solid;
+            
+        }
+/*        띄어쓰기도 함부로 하면안됨, 뜻을갖구있씀다.*/
+/*        자식 = 띄어쓰기 자손=> 구분되어져 있다.*/
+        div>div{
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div>   
+        div
+        <div>child1-1</div>
+        <div>child1-2</div>
+        <div>
+        child1-3
+            <a href = "a"></a>
+            <div>child1-4</div>
+            <div>child1-5</div>
+        </div>
+    </div>
+    <div>   
+        div
+        <div>child2-1</div>
+        <div>child2-2</div>
+        <div>
+        child2-3
+        <div>child2-4</div>
+        <div>child2-5</div>
+        
+        </div>
+    </div>
+    <div>   
+        div
+        <div>child3-1</div>
+        <div>child3-2</div>
+        <div>
+        child3-3
+        <div>child3-4</div>
+        <div>child3-5</div>
+        </div>
+    </div>
+</body>

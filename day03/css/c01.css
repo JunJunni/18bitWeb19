@@ -1,0 +1,40 @@
+            header,nav,section,footer{
+                width: 900px;
+/*                border: 1px solid blue;*/
+                margin: 0px auto;
+            }
+            
+            header>h1{
+                text-indent: -999px;
+                background-image: url(imgs/snowflake.png);
+                background-position: top;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            
+            nav{
+                background-color: aliceblue;
+            }
+            
+            nav div{
+                width:400px;
+                margin: 0px auto;
+            }
+            nav a{
+                text-decoration: none;
+                display: inline-block;
+                width: 95px;
+                background-color: skyblue;
+                text-align: center;
+            }
+           
+            nav a:link,nav a:visited{
+                color:black;
+            }
+            nave a:hover,nav a:active{
+                background-color: darkcyan;
+            }
+            footer{
+                background-color: gainsboro;
+                text-align: center;
+            }

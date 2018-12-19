@@ -1,0 +1,41 @@
+<!doctype>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+        
+            body{
+/*                패딩을 적용하는 것이 아니라, 마진으로 주어야 한다.*/
+                margin: 0px;
+            }
+           
+            div>div{
+                width:100px;
+                height: 100px;
+                background-color: cadetblue;
+            }
+            body>div:last-child>div:first-child{
+                padding: 20px;
+            }
+             body>div{
+                 width: 300px;
+                margin: 0px, auto;
+                 background-color: crimson;
+            }
+            
+        
+        </style>
+    </head>
+    <body>
+        <div>
+            <div>box1</div>
+        </div>
+        
+        
+        <div>
+            <div>box2</div>
+            <div>box3</div>
+        </div>
+        
+    </body>
+</html>

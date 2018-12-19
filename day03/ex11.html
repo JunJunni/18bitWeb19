@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<!--        <link rel = "stylesheet" type="text/css" href="css/c03.css">-->
+        <style>
+            header,nav,section,footer{
+                border: 1px solid red;
+                width: 900px;
+                }
+            header>h1{
+                text-indent: -999px;
+                background-image: url(imgs/snowflake.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: top;
+            }
+  
+            div>ul{
+                background-color: green;
+                list-style: none;
+                widows: 408px;
+                height: 20px;
+                margin: 0px auto;
+                padding: 0px;
+                
+            }
+            div>ul>li{
+                float: left;
+                list-style: none;
+                background-color: gold;
+                widows: 100px;
+                height: 20px;
+                text-align: center;
+                margin: 0px auto;
+                overflow: hidden;
+            }
+
+            li>ul>li{
+                list-style: decimal;
+                background-color: gainsboro;
+            }
+            section{
+                clear: both;
+            }
+
+        
+        </style>
+    </head>
+    <body>
+        <header><h1>회사로고</h1>
+<!--            <img alt="snowflack" src="imgs/snowflake.png">-->
+
+        </header>
+        
+        <nav>
+            <div>
+                <ul>
+                    <li>menu1
+                         <ul>
+                            <li>item1-1</li>
+                            <li>item1-2</li>
+                            <li>item1-3</li>
+                            <li>item1-4</li>
+                        </ul>
+                    </li>
+                    <li>menu2
+                            <ul>
+                            <li>item1-1</li>
+                            <li>item1-2</li>
+                            <li>item1-3</li>
+                            <li>item1-4</li>
+                        </ul>
+                    </li>
+                    <li>menu3
+                            <ul>
+                            <li>item1-1</li>
+                            <li>item1-2</li>
+                            <li>item1-3</li>
+                            <li>item1-4</li>
+                        </ul>
+                    </li>
+                    <li>menu4
+                            <ul>
+                            <li>item1-1</li>
+                            <li>item1-2</li>
+                            <li>item1-3</li>
+                            <li>item1-4</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section>
+            <div>
+                <p>
+                   모델-뷰-컨트롤러(Model–View–Controller, MVC)는 소프트웨어 공학에서 사용되는 소프트웨어 디자인 패턴이다.  
+                </p>
+                <p>
+                    이 패턴을 성공적으로 사용하면, 사용자 인터페이스로부터 비즈니스 로직을 분리하여 애플리케이션의 시각적 요소나 그 이면에서 실행되는 비즈니스 로직을 서로 영향 없이 쉽게 고칠 수 있는 애플리케이션을 만들 수 있다. MVC에서 모델은 애플리케이션의 정보(데이터)를 나타내며, 뷰는 텍스트, 체크박스 항목 등과 같은 사용자 인터페이스 요소를 나타내고, 컨트롤러는 데이터와 비즈니스 로직 사이의 상호동작을 관리한다.
+                </p>
+            </div>
+        </section>
+        <footer>
+        <address>비트캠프 서울시 서초구 서초동 블라블라</address>
+            Copyright &copy; 비트캠프 All rights reserved.
+        </footer>
+    </body>
+</html>
