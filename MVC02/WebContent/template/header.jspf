@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+		<div id="header">
+			<h1>비트교육센터</h1>
+			<form action="" method="post">
+				<label for="id"></label><input type="text" id="id" /><br /> <label
+					for="pw"></label><input type="text" id="pw" /><br />
+				<button type="submit">login</button>
+			</form>
+		</div>
+
+</body>
+</html>

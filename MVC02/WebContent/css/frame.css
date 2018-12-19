@@ -1,0 +1,64 @@
+body {
+	margin: 0px;
+	padding:0px;
+}
+
+body>div {
+	width: 960px;
+	margin: 0px auto;
+}
+
+#header {
+	
+}
+
+#header>h1 {
+	float: left;
+	background-image: url("../imgs/logo.png");
+	background-repeat: no-repeat;
+	background-position: 100%;
+	text-indent:-900px;
+	width:400px;
+	height:110px;
+}
+
+#header>form {
+	float: right;
+}
+
+#menu,#footer {
+	clear: both;
+	background-color: rgb(200,200,200);
+	
+}
+#menu{
+	height:18px;
+	overflow:hidder;
+
+}
+#menu>ul {
+	padding: 0px;
+	width:400px;
+	margin: 0px auto;
+		
+}
+
+#menu>ul>li {
+	width:100px;
+	list-style: none;
+	float:left;
+}
+
+#menu>ul>li>a {
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
+	text-align: center;
+}
+#menu>ul>li>a:hover{
+	color:fuchsia;
+	background: gray;
+}
+#menu>ul>li>a:VISITED,#menu>ul>li>a:LINK {
+	color:blue;
+}
