@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	var btn,div,xhr;
+	
+	window.onload=function(){
+		div=document.querySelector("div");
+		btn=document.querySelector("button");
+		
+		btn.addEventListener('click',function(){
+			callback();
+		});
+	};
+	function callback(){
+		xhr=new XMLHttpRequest();
+		xhr.onreadystatechagne=callback2;
+		xhr.open('GET','result02.xml',true);
+		xhr.send();
+	};
+	
+	function callback2(){
+		if(xhr.readyState==4 && xhr.status==200){
+			var xml=xhr.responseXML;
+			var id = xml.childNodes[0].childNodes[3].childNodes[1].childNodes[0].nodevalue;
+			var name = xml.childNodes[0].childNodes[3].childNodes[3].childNodes[0].nodevalue;
+			div.innerHTML='<h2>'+id+'</h2>'+'<p>'+name+'</p>';
+		}
+	};
+	var id,name;
+	function callback3(){
+		if(xhr.readyState==4 && xhr.status==200){
+			var xml=xhr.responseXML;
+			id=xml.getElements
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>Ajax(Asynchronous JavaScript and XML, 에이잭스)통신</h1>
+	<div>
+		<button>xml파싱</button>
+	</div>
+</body>
+</html>

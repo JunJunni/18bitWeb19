@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!--xml 정의는 항상 최상단에 개행도 안된다.-->
+
+<root> <!--테이블명 root element  -->
+	<row> <!-- 레코드  -->
+		<id>admin</id> <!-- 컬럼 -->
+		<name>관리자</name>
+	</row>
+</root>

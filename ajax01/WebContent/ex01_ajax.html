@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	header,nav,section,footer{
+		width: 900px;
+		margin: 0px auto;
+		border:1px solid gray;
+	}
+	header>h1{
+		width: 70%;
+		float:left;
+		
+	}
+	header>div{
+		width: 30%;
+		float:right;
+	}
+	nav{
+		clear:both;
+	}
+</style>
+<script type="text/javascript">
+//동기 비동기
+	var login, div,id,pw;
+	window.onload=function(){
+		login=document.querySelector("header>div>button");
+		div=document.querySelector("header>div");
+		id=document.querySelectorAll("header>div>input")[0];
+		pw=document.querySelectorAll("header>div>input")[1];
+		
+		login.addEventListener('click', callback);
+	};
+	
+	function callback(){
+		var p1=id.value;
+		var p2=pw.value;
+		var xhr= new XMLHttpRequest();//JSP와 통신을 위한 객체 생성
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4 && xhr.status==200){ //예외처리! 
+				var msg = xhr.responseText;
+				div.innerHTML=msg;
+			}else if(xhr.readyState==4){
+				alert('문제가 있습니다.');
+			}
+		};
+	//	xhr.open('GET','http://localhost:8080/ajax01/result01.jsp?id='+p1+'&pw='+p2,true);
+		xhr.open('GET','',true);
+		xhr.send();
+	};
+
+</script>
+</head>
+<body>
+	<header>
+		<h1>감기몸살 콜록콜록</h1>
+		<div>
+			<label for="id">id</label><input type="text" id="id"/></br>
+			<label for="pw">pw</label><input type="text" id="pw"/></br>
+			<button>로그인</button>
+		</div>
+	</header>
+	<nav>
+		<a href="#">menu1</a>
+		<a href="#">menu2</a>
+		<a href="#">menu3</a>
+		<a href="#">menu4</a>
+		
+	</nav>
+	<section>
+		<h1>아침먹고 약먹어야함</h1>
+	</section>
+	<footer>
+		Copyright &copy; 감기몸살 오져따리
+	</footer>
+</body>
+</html>
