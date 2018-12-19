@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="application/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="application/javascript">
+	/*$(document).ready(function(){
+		$.get("ex01.xml",null,function(data,textStatus,jqXHR){
+			console.log(1,data);
+			console.log(2,textStatus);
+			console.log(3,jqXHR);
+			
+			//$('div').text(data);
+			var val1=$(data).find('col1').text();
+			var val2=$(data).find('col2').text();
+			
+			$('div').text('col1'+val1+'col2'+val2);
+		},'xml');
+	});*/
+	$.post({
+		url:'ex01.xml',
+		dataType:'xml',
+		success:function(data){
+			var val1=$(data).find('col1').text();
+			var val1=$(data).find('col2').text();
+		}
+	})
+	
+	
+</script>
+</head>
+<body>
+<h1>xml파싱</h1>
+<div></div>
+</body>
+</html>

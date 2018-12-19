@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.btns {
+	position: relative;
+}
+
+.btns>div {
+	position: absolute;
+	width:200px;
+	height:300px;
+	top:-300px;
+	background-color: rgba(0,0,0,0.5);
+	font-size:200px;
+	font-weight:bold;
+	text-align:center;
+	color:white;
+	opacity:0.5;
+}
+.btns>div:last-child{
+	left:400px;
+}
+</style>
+<script type="application/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="application/javascript" src="js/jquery.bxslider.js"></script>
+<script type="application/javascript">
+
+var options={
+		//auto:true,
+		minSlides:2,
+		maxSlides:3,
+		moveSlides:1,
+		slideWidth:200,
+		pager:false,
+		controls:false,
+		//아래는 callback option들 
+		onSliderLoad:function(){
+			//alert('Load');
+		},
+		onSliderResize:function(){
+			//alert('Resize');
+		},
+		onSlideBefore:function(){
+			//alert('Before');
+		},
+		onSlideAfter:function(){
+			//alert('After');
+		},
+		onSlideNext:function(){
+			//alert('Next');
+		},
+		onSlidePrev:function(){
+			//alert('Prev');
+		}
+		
+};
+var cnt=0;
+	$(document).ready(function(){
+		var bx=$('.bx').bxSlider(options);
+		$('.btns>div').first().click(function(){
+			bx.goToPrevSlide();
+		});
+		$('.btns>div').last().click(function(){
+			//if(cnt<5)cnt++;
+			//else cnt=0;
+			//bx.goToSlide(cnt);
+			bx.goToNextSlide();
+		});
+	});
+
+
+
+
+
+
+</script>
+</head>
+<body>
+	<div>
+		<div id="header">
+			<h1>비트교육센터</h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">게시판</a></li>
+				<li><a href="#">글쓰기</a></li>
+			</ul>
+		</div>
+		<div id="content">
+
+			<div class="bx">
+				<img alt="" src="imgs/small1.jpg"> <img alt=""
+					src="imgs/small2.jpg"> <img alt="" src="imgs/small3.jpg">
+				<img alt="" src="imgs/small4.jpg"> <img alt=""
+					src="imgs/small5.jpg"> <img alt="" src="imgs/small6.jpg">
+			</div>
+			<div class="btns">
+				<div>&lt;</div>
+				<div>&gt;</div>
+			</div>
+		</div>
+		<div id="footer">
+			<address>비트캠프 나부랭이~~</address>
+		</div>
+	</div>
+</body>
+</html>

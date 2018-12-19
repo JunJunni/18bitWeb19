@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#header>h1 {
+	float: left;
+}
+
+#header>form{
+float: right;
+	width: 200px;
+	background-color: yellow;
+	
+}
+
+#menu {
+	clear: both;
+}
+</style>
+<script type="application/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="application/javascript">
+	$(document).ready(function(){
+		$('#header>div>button').click(function(){
+			var id=$('#header>div>input').first().val();
+			var pw=$('#header>div>input').last().val();
+			
+			var param='id'+id+'pw'+pw;
+			
+			$.get('ex03.xml',param,function(data){
+				if($(data).find('result').text()=='ture'){
+					$('#header>div').html('<p>'+id+'님 로긴 ㄳ');
+				}
+			});
+		});
+		
+	});
+</script>
+</head>
+<body>
+	<div id="header">
+		<h1>빝빝 핥 빝</h1>
+	</div>
+
+	<form >
+		<label for="id">id</label><input type="text" id="id"><br/> <label
+			for="pw">pw</label><input type="text" id="id"><br/>
+		<button>로그인</button>
+	</form>
+
+	<div id="menu">
+		<a href="#">menu1</a><a href="#">menu2</a><a href="#">menu3</a><a
+			href="#">menu4</a><a href="#">menu5</a>
+	</div>
+</body>
+</html>

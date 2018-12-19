@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="application/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="application/javascript">
+
+$(document).ready(function(){
+		
+		$.get('ex02.xml',function(data){
+			/*
+			var imgs=$(data).find('img'); //이미지를 잡으면 제이쿼리 이미지들이 나와겠지..
+			for(var i=0; i<imgs.length; i++){
+				var path=imgs.eq(i).find('path').text()+imgs.eq(i).find('name').text();
+			$('div').append('<img src="'+path+'"/>');
+			}*/
+			
+			$(data).find('img').each(function(idx,ele){
+				var name=$(ele).children().first().text();//name
+				var path=$(ele).children().last().text();//path
+				path+=name;
+				var img=$("<img/>").attr('src',path);
+				$('div').append(img);
+			});
+		});
+	});
+
+</script>
+</head>
+<body>
+	<h1>xml data pasing</h1>
+	<div></div>
+</body>
+</html>
