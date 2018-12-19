@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="application/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="application/javascript" src="js/jquery.bxslider.js"></script>
+<script type="application/javascript">
+$(document).ready(function(){
+	$.ajax({
+		url:'ex02.json',
+		method:'get',
+		dataType:'json',
+		success:function(data,textStatus,jqXHR){
+			var arr=data.imgs;
+			for(var i=0; i<arr.length; i++){
+				$('<img src="imgs/'+arr[i].name+'"/>').appendTo('#bx').attr('title',arr[i].title);
+			}
+			$('#bx').bxSlider({
+				slideWidth:300,
+				minSlides:1,
+				maxSlides:3,
+				moveSlides:1
+			});
+		}
+	
+	});
+});
+</script>
+</head>
+<body>
+<h1>Carousel</h1>
+<div id ="bx"></div>
+</body>
+</html>

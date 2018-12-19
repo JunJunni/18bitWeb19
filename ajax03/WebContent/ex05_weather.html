@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>How's the weather like?</title>
+<style>
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+tr, td, th {
+	border: 1px solid gray;
+}
+</style>
+<script type="application/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="application/javascript">
+	
+	$(document).ready(function(){
+		$.ajax({
+			url:'ex05.xml',
+			method:'get',
+			dataType:'xml',
+			success:function(data){
+				//아이게 depth로가면 너무 깊잖아 $로 둘러싸고 find로 찾아벌임
+				$(data).find('location').each(function(){//여러개이니 반복하겟음
+					var tr=$('<tr></tr>');//넘 길어서 빼내었습니당 ㅎㅎ 
+					
+					tr.append('<td>'+$(this).children('city').text()+'</td>');
+					for(var i=0; i<8; i++){
+						tr.append('<td>'+$(this).children('data').eq(i).children('wf').first().text()+'</td>');
+					}
+					tr.appendTo('table');//갯수만큼 테이블에 넣겠다
+				});
+			},
+			error:function(a,b,c){
+				alert(b+')'+c);
+			}
+		});
+	});
+
+</script>
+</head>
+<body>
+	<h1>지역별 날씨</h1>
+	<table>
+		<tr>
+			<th>지역</th>
+			<th>12/15 am</th>
+			<th>12/15 pm</th>
+
+			<th>12/16 am</th>
+			<th>12/16 pm</th>
+
+			<th>12/17 am</th>
+			<th>12/17 pm</th>
+
+			<th>12/18 am</th>
+			<th>12/18 pm</th>
+		</tr>
+	</table>
+</body>
+</html>

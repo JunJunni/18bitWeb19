@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type = "application/javascript" src="js/jquery-1.12.4.js"></script>
+<script type = "application/javascript">
+	$(document).ready(function(){
+		$getJSON('http://10.10.10.10:8080]/ajax03/ex04_jsonp?callback=?',function)
+		/*$.ajax({
+			url:'ex04.jsonp?callback=?', //spnp 던질때 바로 콜백을 토옹해서 비스
+			method:'get',
+			dataType:'json',
+			success:function(data){
+				alert(data);
+			},
+			error:function(a,b,c){
+				alert(b+")"+c);
+			}*/
+		});
+	});
+
+</script>
+</head>
+<body>
+<h1>jsonp를 통한 파싱</h1>
+<div></div>
+</body>
+</html>

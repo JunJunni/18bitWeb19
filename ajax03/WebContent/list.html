@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>List</title>
+<style>
+table {
+	width: 500px;
+	margin: 0px auto;
+	border-collapse: collapse;
+}
+
+table, th, tr, td {
+	border: 1px solid gray;
+}
+</style>
+<script type="application/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="application/javascript">
+var obj;
+	$(documnet).ready(function(){
+		$.getJSON('list.json',function(data){
+			obj=data.bbs;
+			data.bbs.forEach(function(ele,idx){
+				var tr=$('<tr></tr>');
+				tr.append('<td>'+ele.num+'</td>');
+				tr.append('<td>'+ele.title+'</td>');
+				tr.append('<td>'+ele.name+'</td>');
+				tr.append('<td>'+ele.ddate+'</td>');
+				$('table').append(tr);
+			});
+		});
+	});
+
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>글번호</th>
+			<th>제목</th>
+			<th>글쓴이</th>
+			<th>날짜</th>
+		</tr>
+	</table>
+</body>
+</html>

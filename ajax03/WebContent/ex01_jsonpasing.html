@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="application/javascript" src="js/jquery-1.12.4.js"></script>
+<script type="application/javascript">
+        	//문서로딩하자마자 pasing 해올것이기 때문에 document에 작성하면 되겠징?
+        			$(document).ready(function(){
+        				//$로 해도된다
+        				jQuery.get('ex01.json',function(data){
+        									//value값은 배열임! 
+        					$('div').html('<h2>id:'+data.root[0].id+'</h2>').append(
+        							'<h3>name:'+data.root[0].name+'</h3>');
+        				},'json')
+        				
+        			});
+        </script>
+</head>
+<body>
+	<h1>Json 파싱</h1>
+	<div></div>
+</body>
+</html>

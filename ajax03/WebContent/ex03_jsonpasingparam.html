@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#header>h1 {
+	float: left;
+}
+
+#header>form {
+	width: 150px;
+	float: right;
+}
+
+#menu {
+	clear: both;
+	background-color: gray;
+}
+
+#menu>a {
+	color: white;
+}
+</style>
+<script type = "application/javascript" src="js/jquery-1.12.4.js"></script>
+<script type = "application/javascript">
+	$(document).ready(function(){
+		$('#header>form').submit(function(e){
+			e.preventDefault();
+			
+			$.ajax({
+				url:'ex03.bit',
+				method:'POST',
+				//data:'id='+$('#id').val()+'&pw='+$('#pw').val(),
+				data:$.param({
+					id:$('form>input').first().val(),
+					pw:$('form>input').last().val()
+				}),
+				dataType:'json',
+				error:function(jqXHR,textStatus,errorThrown){
+					alert(jqXHR+'\n'+textStatus+'\n'+errorThrown);
+				},
+				success:function(data){
+					if(data.login[0].result){
+						var msg=data.login[0].name+'님 환영합니다.';
+						$('form').html('<p>'+msg+'</p>');
+					}else{
+						alert('로긴 실패! ');
+						$('form').find('input').each(function(){
+							$(this).val('');
+						}).first().focus();
+					}
+				}
+				
+		//		success:function(response){alert(response);}
+				
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="header">
+		<h1>비트교육센터</h1>
+		<form action="ex03.bit" method="post">
+			<label for="id">id</label><input type="text" id="id"><br />
+			<label for="pw">pw</label><input type="text" id="pw"><br />
+			<button type="submit">login</button>
+		</form>
+	</div>
+	<div id="menu">
+		<a href="#">menu1</a> <a href="#">menu2</a> <a href="#">menu3</a> <a
+			href="#">menu4</a>
+	</div>
+</body>
+</html>
