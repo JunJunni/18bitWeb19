@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+            div>img{
+                width:200px;
+                height: 300px;
+            }
+        </style>
+        <script type = "application/javascript">
+            var img;
+            var num=1;
+            window.onload=function(){
+                img=document.querySelectorAll('img');
+             //   console.log('img1','img2','img3');
+              //  window.setInterval(nextImg,1500);
+                img[0].src="imgs/small"+1+".jpg";
+                img[1].src="imgs/small"+2+".jpg";
+                img[2].src="imgs/small"+3+".jpg";
+                prev=document.querySelectorAll('a')[0];
+                next=document.querySelector('a')[1];
+                
+                prev.onclick=function(){
+                    prevImg();
+                    return false;
+                };
+                next.onclick=function(){
+                    nextImg2();
+                    return false;
+                }
+                
+            };
+            function prevImg(){
+                if(num>-2)num--;
+                else num=4;
+                if(num==0){
+                   img[0].src="imgs/small"+6+".jpg"; 
+                }else if(num==-1){
+                    img[0].src="imgs/small"+5+".jpg";
+                    img[1].src="imgs/small"+6+".jpg";
+                }else{
+                    img[0].src="imgs/small"+num+".jpg";
+                    img[1].src="imgs/small"+(num+1)+".jpg";
+                    img[2].src="imgs/small"+(num+2)+".jpg";
+                }
+            };
+            function nextImg2(){
+                if(num<6) num++;
+                else num=1;
+            
+                img[0].src="imgs/small"+num+".jpg";
+            
+                if(num==6){
+                    imgs[1].src="imgs/small"+1+".jpg";
+                }else{
+                    img[1].src="imgs/small"+(num+1)+".jpg";
+                }
+                if(num==5){
+                    img[2].src="imgs/small"+1+".jpg";
+                }else if(num==6){
+                    img[2].src="imgs/small"+2+".jpg";
+                }else{
+                    img[2].src="imgs/small"+(num+2)+".jpg";
+                }
+            };
+            
+            /* atag 없이 그냥 넘어갈때 쓰던 함수! 자동으로 next될껄
+            function nextImg(){
+                img[0].src="imgs/small"+num+".jpg";
+                img[1].src="imgs/small"+(num+1)+".jpg";
+                img[2].src="imgs/small"+(num+2)+".jpg";
+                if(num<6&&num!=5){
+                    num++;
+                }else if(num<6&& num==5){
+                    img[2].src="imgs/small"+1+".jpg";
+                    num++;
+                }else if(num==6){
+                    img[1].src="imgs/small"+1+".jpg";
+                    img[2].src="imgs/small"+2+".jpg";
+                    num=1;
+                }
+            };
+        */
+       
+        </script>
+    </head>
+    <body>
+        <div>
+            <img alt="" src="imgs/small1.jpg"/>
+            <img alt="" src="imgs/small2.jpg"/>
+            <img alt="" src="imgs/small3.jpg"/>
+            <a href="#">prev</a>
+            <a href="#">next</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style rel='stylesheet' type="text/css">
+            div{
+                width: 200px;
+                height: 300px;
+                overflow: hidden;
+            }
+            div>ul{
+                width: 1200px;
+                padding: 0px;
+            }
+            div>ul>li{
+                list-style: none;
+                float: left;
+            }
+            div>ul>li>img{
+                width: 200px;
+                height: 300px;
+            }
+        </style>
+        <script type = "application/javascript">
+            var ul,li,img;
+            window.onload=function(){
+                ul=document.querySelector('ul');
+                ul.style.margin='132px';
+            };
+        </script>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li><img alt="" src="imgs/small1.jpg"/></li>
+                <li><img alt="" src="imgs/small2.jpg"/></li>
+                <li><img alt="" src="imgs/small3.jpg"/></li>
+                <li><img alt="" src="imgs/small4.jpg"/></li>
+                <li><img alt="" src="imgs/small5.jpg"/></li>
+                <li><img alt="" src="imgs/small6.jpg"/></li>
+            </ul>
+        </div>
+        
+    </body>
+</html>
